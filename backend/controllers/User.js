@@ -1,5 +1,6 @@
 const { emailVerification, verifyLength } = require("../handler/verfication")
 const Usermodel = require("../models/usermodel")
+const bcrypt = require('bcrypt')
 
 exports.signup = async (req, res)=>{
     try{
@@ -51,12 +52,16 @@ exports.signup = async (req, res)=>{
             })
         }
 
+        //bcrypt password
+
+        const encrypt = await bcrypt.hash(password, 10)
+
         const User = await new Usermodel({
             first_name,
             last_name,
             username,
             email,
-            password,
+            password: encrypt,
             gender,
             birth_day,
             birth_month,
