@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --primary_button: #166FE5;
+  --secondary_button: #23D2E2;
+  --secondary_button: #36A420;
+  --primary_text_color: #1C1E21;
+  --sub_text_color: #AFB0C0;
+  --main_color: #7A77FD;
+  --rare_color: #45437F;
+  --normal_color: #FFFFFF;
+  --page_color: #F7F7FB;
+  --basic_black: #181828;
+}
